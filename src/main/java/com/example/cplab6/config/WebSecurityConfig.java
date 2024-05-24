@@ -12,7 +12,7 @@ public class WebSecurityConfig {
         http.formLogin();
 
         http.authorizeHttpRequests()
-                .requestMatchers("/loginForm").authenticated()
+                .requestMatchers("/mesas","/mesas/**").authenticated()
                 .anyRequest().permitAll();
         return http.build();
     }
